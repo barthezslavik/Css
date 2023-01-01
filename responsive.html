@@ -1,0 +1,52 @@
+<style>
+    /* Mobile menu */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Desktop menu */
+    .nav-menu-desktop {
+        display: block;
+    }
+
+    /* Toggle button */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Toggle button icon */
+    .nav-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+</style>
+
+<nav>
+    <a href="#" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <ul class="nav-menu-desktop">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<script>
+    // Toggle menu
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', function () {
+        menu.classList.toggle('nav-menu-open');
+    });
+</script>
